@@ -687,7 +687,7 @@
 ;; Let's take a look at only using pennies first, i.e. m = 1:
 ;; (cc n 1) = (+ (cc n 0) (cc (- n d) 1), where d is the coin denomination.
 ;; Let's denote the order of growth in steps as a function of m and n, F(m, n).
-;; F(n, 1) = 1 + F(n - d, 1) = 2 + F(n - 2d, 1), about n/d, so it's O(n).
+;; F(n, 1) = 1 + F(n - d, 1) = 2 + F(n - 2d, 1), about n/d, so it's Θ(n).
 
 ;; Let's now look at the more general case.
 ;; (cc n m) = (+ (cc n (- m 1))
@@ -796,7 +796,7 @@
            (iter b (- n 1) (* acc b)))))
   (iter b n 1))
 
-;; This is O(1) for space and O(log n) for number of steps.
+;; This is Θ(1) for space and Θ(log n) for number of steps.
 
 ;;; Exercise 1.17
 ;; The exponentiation algorithms in this section are based on
@@ -945,4 +945,23 @@
                    p
                    q
                    (- count 1)))))
+
+;;; Exercise 1.20
+;; The process that a procedure generates is of course
+;; dependent on the rules used by the interpreter.
+;; As an example, consider the iterative gcd procedure given above.
+;; Suppose we were to interpret this procedure using normal-order evaluation,
+;; as discussed in 1.1.5. (The normal-order-evaluation rule for
+;; if is described in Exercise 1.5.) Using the substitution method
+;; (for normal order), illustrate the process generated in evaluating
+;; (gcd 206 40) and indicate the remainder operations that are actually performed.
+;; How many remainder operations are actually performed
+;; in the normal-order evaluation of (gcd 206 40)?
+;; In the applicative-order evaluation?
+
+;;; Answer:
+;; Using normal-order evaluation, remainder is called 18 times.
+;; 14 of which are to evaluate the condition, and an additional
+;; 4 during the final reduction evaluation phase.
+;; Using applicative-order evaluation, remainder is called 4 times.
 
