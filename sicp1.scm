@@ -783,14 +783,17 @@
 ;; where a' = ab, b' = b, n' = n - 1
 ;; That's all we need.
 
+;; acc stands for accumulator, which is basically what
+;; the additional state variable we're introducing is.
+
 (define (fast-expt b n)
-  (define (iter b n a)
+  (define (iter b n acc)
     (cond ((= n 0)
-           a)
+           acc)
           ((even? n)
-           (iter (square b) (/ n 2) a))
+           (iter (square b) (/ n 2) acc))
           (else
-           (iter b (- n 1) (* a b)))))
+           (iter b (- n 1) (* acc b)))))
   (iter b n 1))
 
 ;; This is O(1) for space and O(log n) for number of steps.
@@ -831,4 +834,33 @@
          (fast-mul (double a) (halve b)))
         (else
          (+ a (fast-mul a (- b 1))))))
+
+;;; Exercise 1.18
+;; Using the results of Exercise 1.16 and Exercise 1.17, devise a procedure
+;; that generates an iterative process for multiplying two integers
+;; in terms of adding, doubling, and halving and uses a logarithmic number of steps.
+
+;;; Answer:
+;; We need to introduce another variable, a state variable.
+;; Again, there are two cases for which we must come up with an invariant:
+;; When b is even, we have (from above):
+;; a' = 2a
+;; b' = b/2
+;; acc' = acc
+
+;; When b is odd:
+;; ab + n = a · (1 + (b - 1)) + n = a · (b - 1) + (n + a)
+;; a' = a
+;; b' = (b - 1)
+;; n' = n + a
+
+(define (fast-mul a b)
+  (define (iter a b acc)
+    (cond ((= b 0)
+           acc)
+          ((even? b)
+           (iter (double a) (halve b) acc))
+          (else
+           (iter a (- b 1) (+ acc a)))))
+  (iter a b 0))
 
