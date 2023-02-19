@@ -39,6 +39,26 @@
 ;; We can use get-internal-run-time instead.
 ;; I have changed some things to get a less-cluttered output.
 
+(define (square x) (* x x))
+
+(define (smallest-divisor n)
+  (find-divisor n 2))
+
+(define (find-divisor n test-divisor)
+  (cond ((> (square test-divisor) n)
+         n)
+        ((divides? test-divisor n)
+         test-divisor)
+        (else (find-divisor
+               n
+               (+ test-divisor 1)))))
+
+(define (divides? a b)
+  (= (remainder b a) 0))
+
+(define (prime? n)
+  (= n (smallest-divisor n)))
+
 (define (timed-prime-test n)
   (start-prime-test n (get-internal-run-time)))
 
@@ -52,8 +72,6 @@
   (display " *** ")
   (display elapsed-time)
   (newline))
-
-;; Let's search-for-primes. Even numbers can't be primes!
 
 (define (search-for-primes start end)
   (define (iter n)
@@ -181,7 +199,7 @@
 
 ;; For less variance, I also implemented the procedure in Chicken Scheme.
 ;; This was done for the sole reason that Chicken Scheme features a compiler.
-;; Instead of get-internal-run-time, Chicken has cpu-time.
+;; Instead of get-internal-run-time, Chicken has current-milliseconds.
 ;; For bigger numbers, in Chicken scheme we get the following
 ;; successive ratios (check the 1.22chicken.scm file):
 ;; 3.16

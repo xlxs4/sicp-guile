@@ -21,11 +21,11 @@
   (= n (smallest-divisor n)))
 
 (define (timed-prime-test n)
-  (start-prime-test n (cpu-time)))
+  (start-prime-test n (current-milliseconds)))
 
 (define (start-prime-test n start-time)
   (if (prime? n)
-      (report-prime n (- (cpu-time)
+      (report-prime n (- (current-milliseconds)
 			 start-time))))
 
 (define (report-prime n elapsed-time)

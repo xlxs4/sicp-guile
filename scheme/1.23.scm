@@ -172,3 +172,6 @@
 ;; We did better now, getting close to the theoretical 1/2 ratio.
 
 ;; TODO: figure out why Guile was doing better out of the box.
+;; TODO: some other people online also observe differences
+;; (I guess they use MIT Scheme instead)
+
