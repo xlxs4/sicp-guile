@@ -1,38 +1,28 @@
-;;;; SPDX-FileCopyrightText: 2020 Vladimir Nikishkin <lockywolf@gmail.com>
-;;;; SPDX-FileCopyrightText: 2021 Vasilij Schneidermann <mail@vasilij.de>
-;;;;
-;;;; SPDX-License-Identifier: MIT
+;;; -*- mode: scheme; -*-
+;; Time-stamp: <2021-01-06 22:42:17 lockywolf>
+;; Title: srfi-216 sample implementation.
+;; Author: lockywolf
+;; Created: <2020-11-03 Tue>
 
-;;; Constants
+;;; r4rs booleans
 
 (define true #t)
-(define false #f)
+(define false #f) ;; luckily, SICP does not use '() as false
+
+;;; Empty list
 (define nil '())
 
 ;;; Random numbers.
 
-(define (random x) ;; (chicken random)
+(define (random x) ;; srfi-27
   (if (exact-integer? x)
-      (pseudo-random-integer x)
-      (* x (pseudo-random-real))))
+     (random-integer x)
+     (* x (random-real))))
 
 ;;; Timing.
 
-#>
-#include <sys/time.h>
-static struct timeval t0;
-static int t0_initialized = 0;
-<#
-
-(define runtime ;; (chicken foreign)
-  (foreign-lambda* double ()
-    "struct timeval t1;"
-    "if (!t0_initialized) {"
-    "  gettimeofday(&t0, NULL);"
-    "  t0_initialized = 1;"
-    "}"
-    "gettimeofday(&t1, NULL);"
-    "C_return((t1.tv_sec - t0.tv_sec) * 1000 + (t1.tv_usec - t0.tv_usec) / 1000.0);"))
+(define (runtime) ;; r7rs
+  (round (* (current-jiffy) (jiffies-per-second) #e1e6))) ;; microseconds
 
 ;;; Multi-threading.
 
@@ -71,3 +61,4 @@ static int t0_initialized = 0;
 (define stream-null? null?)
 
 (define the-empty-stream '())
+
