@@ -17,6 +17,7 @@
 ;; scheme@(guile-user)> (my-sqrt 1.0e-8)
 ;; 0.03125010656242753
 
+;; (define (square x) (* x x))
 ;; scheme@(guile-user)> (square (my-sqrt 1.0e-8))
 ;; $9 = 9.76569160163076e-4
 

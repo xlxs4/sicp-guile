@@ -70,7 +70,7 @@ This ~~book~~ repository is dedicated, in respect and admiration, to the spirit 
 
 > Common Lisp macros are to C++ templates what poetry is to IRS tax forms
 
-- [Lessons Learned Implementing Common Lisp with LLVM](https://youtube.com/watch?v=mbdXeRBbgDM) by Christian Schafmeister
+— [Lessons Learned Implementing Common Lisp with LLVM](https://youtube.com/watch?v=mbdXeRBbgDM) by Christian Schafmeister
 
 > [...] Remember, I'm not saying that programming is an easy way to express poorly defined ideas! To take advantage of the unsurpassed flexibility of this medium requires tremendous skill-technical, intellectual, and esthetic. To constrain the behavior of a program precisely to a range may be very hard, just as a writer will need some skill to express just a certain degree of ambiguity. A computer is like a violin. You can imagine a novice trying first a phonograph and then a violin. The latter, he says, sounds terrible. That is the argument we have heard from our humanists and most of our computer scientists. Computer programs are good, they say, for particular purposes, but they aren't flexible. Neither is a violin, or a typewriter, until you learn how to use it.
 
