@@ -60,3 +60,13 @@
 (map miller-rabin? '(9 15 21 25 33 45))  ; (#f #f #f #f #f #f)
 (map miller-rabin? '(3 5 7 11 13 17))  ; (#t #t #t #t #t #t)
 (map miller-rabin? '(561 1105 1729 2465 2821 6601))  ; (#f #f #f #f #f #f)
+
+;; Note that SICP is wrong in the above exercise definition.
+;; That is because it uses the wrong definition of a Miller-Rabin
+;; witness. It is not true that  if n is an odd number that
+;; is not prime, then, for at least half the numbers a < n,
+;; computing a^(n - 1) in this way will reveal a nontrivial
+;; square root of 1 modulo n. For more information on this,
+;; see the following link:
+;; https://stackoverflow.com/a/59834347/10772985
+
