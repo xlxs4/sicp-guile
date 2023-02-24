@@ -35,6 +35,8 @@
 (define (factorial n)
   (product identity 1 inc n))
 
+(factorial 1000)
+
 (define (pi n)
   (define (wallis a b)
     (define (term x)
