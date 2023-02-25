@@ -62,14 +62,14 @@
         (iter (- i 1) (/ (n i) (+ (d i) acc)))))
   (iter k 0))
 
-(define (approximate-phi k)
+(define (approx-one-over-phi k)
   (cont-frac (lambda (i) 1.0)
              (lambda (i) 1.0)
              k))
 
 ;; 1/φ is ≅ 0.6180339887498
 
-;; scheme@(guile-user)> (approximate-phi 10)
+;; scheme@(guile-user)> (approx-one-over-phi 10)
 ;; 0.6179775280898876
-;; scheme@(guile-user)> (approximate-phi 11)
+;; scheme@(guile-user)> (approx-one-over-phi 11)
 ;; 0.6180555555555556
