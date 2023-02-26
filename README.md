@@ -6,6 +6,10 @@ This ~~book~~ repository is dedicated, in respect and admiration, to the spirit 
 
 — Alan J. Perlis
 
+> [...] I select "The Raven" as most generally known. It is my design to render it manifest that no one point in its composition is referable either to accident or intuition — that the work proceeded step by step, to its completion, with the precision and rigid consequence of a mathematical problem. [...] Most writers [...] would positively shudder at letting the public take a peep behind the scenes, at the elaborate and vacillating crudities of thought — at the true purposes seized only at the last moment — at the innumerable glimpses of idea that arrived not at the maturity of full view — at the fully-matured fancies discarded in despair as unmanageable — at the cautious selections and rejections — at the painful erasures and interpolations — at the wheels and pinions —  the tackle for scene-shifting — the step-ladders, and demon-traps — the cock's feathers, the red paint and the black patches, which, [...] constitute the properties of the literary histrio. [...]
+
+— [The Philosophy of Composition](https://pdcrodas.webs.ull.es/fundamentos/PoeThePhilosophyOfComposition.pdf) by Edgar Allan Poe
+
 > I'd like to welcome you on this course on computer science. Actually, that's a terrible way to start. Computer science is a terrible name for this business. First of all, it's not a science — it might be engineering, or it might be art. Or we'll actually see that computer, so called "science", actually has a lot in common with magic.
 
 > [...] And, indeed, on some absolute scale of things we probably know less about the essence of computer science than the ancient Egyptians really knew about geometry. Well, what do I mean by "the essence of computer science?" What do I mean by "the essence of geometry?" See it's certainly true that these Egyptians used surveying instruments, but when we look back on them after a couple of thousand years, we say "gee, what they really were doing the important stuff they were doing, was to begin to formalize notions about space and time." To start a way of talking about mathematical truths formally; that led to the axiomatic method, that led to, sort of, all of modern mathematics. Figuring out a way to talk precisely about so-called declarative knowledge. "What is true?" Well similarly, I think in the future, people will look back and say "yes, those primitives in the twentieth century were fiddling around with these gadgets called computers, but really what they were doing is starting to learn how to formalize intuitions about process — how to *do* things"
@@ -64,6 +68,10 @@ This ~~book~~ repository is dedicated, in respect and admiration, to the spirit 
 
 — [Chris-Perkins (for The Road to Lisp Survey)](https://web.archive.org/web/20061004035628/http://wiki.alu.org/Chris-Perkins) by, well, Chris Perkins
 
+> The most powerful programming language is Lisp. If you don't know Lisp (or its variant, Scheme), you don't know what it means for a programming language to be powerful and elegant. Once you learn Lisp, you will see what is lacking in most other languages. Unlike most languages today, which are focused on defining specialized data types, Lisp provides a few data types which are general. Instead of defining specific types, you build structures from these types. Thus, rather than offering a way to define a list-of-this type and a list-of-that type, Lisp has one type of lists which can hold any sort of data. Where other languages allow you to define a function to search a list-of-this, and sometimes a way to define a generic list-search function that you can instantiate for list-of-this, Lisp makes it easy to write a function that will search any list — and provides a range of such functions. In addition, functions and expressions in Lisp are represented as data in a way that makes it easy to operate on them. [...]
+
+— [Programming languages](https://stallman.org/stallman-computing.html) by Richard Stallman
+
 > Study of the *Design Patterns* book: 16 of 23 patterns have qualitatively simpler implementation in Lisp or Dylan than in C++ for at least some uses of each pattern
 
 — [Design Patterns in Dynamic Programming](https://norvig.com/design-patterns/design-patterns.pdf) by Peter Norvig
@@ -111,4 +119,6 @@ This ~~book~~ repository is dedicated, in respect and admiration, to the spirit 
 > [...] the other thing that seems really imporatant to me is that we spend all our time modifying existing code. Okay? The problem is our code is not adequately evolvable. Right? It's not adequately modifiable to fit the future. In fact, what we want is to make systems that have the property that they are good for things that the designer didn't even think of or intend. [...] What can we do with these Propagators? And I'm only pushing this idea not because I think it's the right answer. I've tried to twist us. So that we say "this is a different way to think." Okay? Some other — we have to think 52 different ways to fix this problem. I don't know the answer to how to get out of this. I don't know how to make a machine that builds a person out of a cell. Okay? But I think the problem is that we've been stuck for too long thinking about the fact that we have been diddling with our details, we're sitting here worrying about our type system, where we ought to be worried about how to get flexible machines and flexible programming.
 
 — [We Really Don't Know How to Compute](https://youtube.com/watch?v=HB5TrK7A4pl) by Gerald Jay Sussman
+
+— [\[Scheme'22\] Programming is (should be) fun!](https://youtube.com/watch?v=2MYzvQ1v8Ww) by Gerald Jay Sussman
 
