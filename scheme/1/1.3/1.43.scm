@@ -18,6 +18,7 @@
 ;; 625
 
 (define (square x) (* x x))
+(define (double x) (* 2 x))
 
 (define (compose f g)
   (lambda (x)

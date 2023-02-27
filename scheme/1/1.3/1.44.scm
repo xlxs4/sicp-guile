@@ -13,6 +13,8 @@
 ;; smoothed function of any given function using smooth
 ;; and repeated from Exercise 1.43.
 
+(define (double x) (* 2 x))
+
 (define (compose f g)
   (lambda (x)
     (f (g x))))
