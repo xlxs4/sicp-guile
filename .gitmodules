@@ -1,0 +1,3 @@
+[submodule "scheme/sicp-interval-arithmetic"]
+	path = scheme/sicp-interval-arithmetic
+	url = https://github.com/xlxs4/sicp-interval-arithmetic
