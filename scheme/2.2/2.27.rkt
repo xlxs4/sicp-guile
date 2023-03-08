@@ -24,6 +24,7 @@
           l2
           (iter (cdr l1) (cons (car l1) l2))))
     (iter xs '()))
-  (if (pair? xs)
-      (reverse (map deep-reverse xs))
-      xs))
+  (cond ((null? xs) '())
+        ((pair? xs)
+         (reverse (map deep-reverse xs)))
+        (else xs)))
