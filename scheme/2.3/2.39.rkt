@@ -27,10 +27,17 @@
               (cdr rest))))
   (iter initial sequence))
 
+;; cons gets us close, but the nesting is messed up.
+;; Remember we can use append instead.
+;; However, we need to (list x) to have something to
+;; append y to, since append needs to be applied to a
+;; list.
+
 (define (reverse sequence)
   (fold-right
    (lambda (x y) (append y (list x))) '() sequence))
 
+;; Nothing to do here.
 (define (reverse sequence)
   (fold-left
    (lambda (x y) (cons y x)) '() sequence))
