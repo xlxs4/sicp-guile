@@ -1,3 +1,6 @@
 [submodule "scheme/sicp-interval-arithmetic"]
 	path = scheme/sicp-interval-arithmetic
 	url = https://github.com/xlxs4/sicp-interval-arithmetic
+[submodule "scheme/sicp-picture-language"]
+	path = scheme/sicp-picture-language
+	url = https://github.com/xlxs4/sicp-picture-language
