@@ -4,3 +4,6 @@
 [submodule "scheme/sicp-picture-language"]
 	path = scheme/sicp-picture-language
 	url = https://github.com/xlxs4/sicp-picture-language
+[submodule "scheme/sicp-symbolic-differentiation"]
+	path = scheme/sicp-symbolic-differentiation
+	url = https://github.com/xlxs4/sicp-symbolic-differentiation
