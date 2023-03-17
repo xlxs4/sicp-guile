@@ -7,3 +7,6 @@
 [submodule "scheme/sicp-symbolic-differentiation"]
 	path = scheme/sicp-symbolic-differentiation
 	url = https://github.com/xlxs4/sicp-symbolic-differentiation
+[submodule "scheme/sicp-sets"]
+	path = scheme/sicp-sets
+	url = https://github.com/xlxs4/sicp-sets
