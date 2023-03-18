@@ -10,3 +10,6 @@
 [submodule "scheme/sicp-sets"]
 	path = scheme/sicp-sets
 	url = https://github.com/xlxs4/sicp-sets
+[submodule "scheme/sicp-huffman"]
+	path = scheme/sicp-huffman
+	url = https://github.com/xlxs4/sicp-huffman
